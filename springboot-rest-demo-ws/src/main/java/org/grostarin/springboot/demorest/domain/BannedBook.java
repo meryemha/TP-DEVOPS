@@ -3,8 +3,8 @@ package org.grostarin.springboot.demorest.domain;
 import javax.persistence.*;
 
 @Entity
-public class Book {
- 
+public class BannedBook {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -13,13 +13,13 @@ public class Book {
     private String title;
 
     @Column(nullable = false)
-    private String author;    
+    private String author;
 
-    public Book() {
+    public BannedBook() {
         super();
     }
 
-    public Book(String title, String author) {
+    public BannedBook(String title, String author) {
         super();
         this.title = title;
         this.author = author;
@@ -51,6 +51,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book [id=" + id + ", title=" + title + ", author=" + author + "]";
+        return "BannedBook [id=" + id + ", title=" + title + ", reason=" + author + "]";
     }
 }

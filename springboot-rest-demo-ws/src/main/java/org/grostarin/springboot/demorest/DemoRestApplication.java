@@ -1,12 +1,5 @@
 package org.grostarin.springboot.demorest;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.annotation.PostConstruct;
-
 import org.grostarin.springboot.demorest.config.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +9,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import javax.annotation.PostConstruct;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 @SpringBootApplication(scanBasePackages = "org.grostarin.springboot.demorest")
 @EnableJpaRepositories("org.grostarin.springboot.demorest.repositories")
